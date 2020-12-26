@@ -4,12 +4,14 @@ import { mockData } from './mock-data';
 class NumberOfEvents extends Component {
 
 	state = {
-		query: null
+		query: undefined
 	}
 
 	handleInputChanged = (event) => {
 		const value = event.target.value;
 		this.setState({ query: value });
+
+		this.props.updateEvents(undefined, value);
 	};
 
 
@@ -17,6 +19,7 @@ class NumberOfEvents extends Component {
 		let data = mockData;
 		return (
 			<div className="numberOfEvents">
+				Number of Events
 				<input 
 					type="number"
 					className="max-events"

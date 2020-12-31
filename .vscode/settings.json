@@ -1,0 +1,6 @@
+{
+	"cucumberautocomplete.steps": [
+			"./src/features/filterEventsByCity.feature"
+	],
+	"cucumberautocomplete.strictGherkinCompletion": true
+}

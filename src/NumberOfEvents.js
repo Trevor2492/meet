@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
-import { mockData } from './mock-data';
+import { ErrorAlert } from './Alert';
 
 class NumberOfEvents extends Component {
 
 	state = {
-		query: undefined
+		query: undefined,
+		infoText: ''
 	}
 
 	handleInputChanged = (event) => {
 		const value = event.target.value;
+
 		this.setState({ query: value });
 
-		this.props.updateEvents(undefined, value);
+		if (value < 1 || value > 32){
+			this.setState({
+				infoText: 'Please enter a number between 1 and 32'
+			});
+		} else {
+			this.setState({ 
+				query: value, 
+				infoText: ''
+			});
+
+			this.props.updateEvents(undefined, value);
+		}
+
 	};
 
 
 	render() {
-		let data = mockData;
 		return (
 			<div className="numberOfEvents">
 				Number of Events
@@ -27,9 +40,8 @@ class NumberOfEvents extends Component {
 					onChange={this.handleInputChanged}
 				/>
 
-				<div className="render-events">
-					{ this.state.query === null ? data.length : data.slice(0, this.state.query).length}
-				</div>
+				<ErrorAlert text={this.state.infoText} />
+
 			</div>
 		)
 	}

@@ -1,6 +1,8 @@
 import { mockData } from './mock-data';
 import axios from 'axios';
 import NProgress from 'nprogress';
+import { ErrorAlert } from './Alert';
+
 
 export const getAccesToken = async () => {
 	const accessToken = localStorage.getItem('access_token');
@@ -40,6 +42,14 @@ export const getEvents = async () => {
 		NProgress.done();
 		return mockData;
 	}
+
+	if (!navigator.onLine) {
+		const events = localStorage.getItem("lastEvents");
+		const parsedEvents = JSON.parse(events).events;
+		NProgress.done();
+		console.log('User is currently offline and any events shown may not be accurate. Go online then re-open the app to load current events.');
+    return parsedEvents;
+  }
 
 	const token = await getAccesToken();
 

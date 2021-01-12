@@ -14,7 +14,8 @@ ul {
 }
 
 p {
-  margin: 5px 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .display-none {
@@ -42,21 +43,22 @@ input[type="number"] {
 
 .CitySearch {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   flex-basis: 300px;
   max-width: 300px;
   margin: auto;
-  margin-bottom: 150px;
+  margin-bottom: 30px;
   position: relative;
 }
 
 .suggestions {
   width: 250px;
-  position: absolute;
+  position: relative;
   z-index: 5;
   align-self: center;
-  margin: 0;
-  top: 43px;
+  margin: 4px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -87,6 +89,7 @@ input[type="number"] {
 }
 
 .details-btn {
+  margin-top: 5px;
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -113,12 +116,17 @@ input[type="number"] {
 
 .description {
   overflow-x: hidden;
+  margin-top: 15px;
 }
 
 .numberOfEvents {
   width: 200px;
   margin: 20px auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-wrapper {
@@ -130,8 +138,20 @@ input[type="number"] {
 }
 
 .Alert {
-  position: fixed;
-  top: 20px;
+  font-size: 14px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offlineAlert {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .data-vis-wrapper {

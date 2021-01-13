@@ -89,7 +89,7 @@ input[type="number"] {
 }
 
 .details-btn {
-  margin-top: 5px;
+  margin-top: 7px;
   position: absolute;
   right: 5px;
   bottom: 5px;
@@ -97,6 +97,7 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  height: 40px;
 }
 
 .name {

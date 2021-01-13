@@ -16,7 +16,7 @@ class Event extends Component{
 		return (
 			<div className="event">
 				<div className="name">{event.summary}</div>
-				<div className="dateTime">Start Time: {event.start.dateTime}</div>
+				<div className="dateTime">Date: {event.start.dateTime.slice(0, 10)}</div>
 				<div className="timeZone">Time Zone: {event.start.timeZone}</div>
 				<div className="location">Location: {event.location}</div>
 

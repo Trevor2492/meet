@@ -24,7 +24,7 @@ You will also see any lint errors in the console.
 
 ## Gif
 
-<img src="https://github.com/Trevor2492/meet/blob/master/Meet-App.gif" width="350" />
+<img src="https://github.com/Trevor2492/meet/blob/master/Meet-App.gif" width="550" />
 
 ### `npm test`
 

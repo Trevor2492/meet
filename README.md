@@ -4,7 +4,7 @@ App allows users to view and sign-up for "meet" type events near their location.
 
 See it in action here: 
 
-trevor2492.github.io/meet/
+https://trevor2492.github.io/meet/
 
 # Getting Started with Create React App
 

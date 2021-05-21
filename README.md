@@ -1,8 +1,4 @@
-# Description
-
-App allows users to view and sign-up for "meet" type events near their location. Uses Google Calendar API and permissions from an example calendar.
-
-See it in action here: 
+# See it in action here: 
 
 https://trevor2492.github.io/meet/
 

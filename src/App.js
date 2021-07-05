@@ -22,7 +22,6 @@ class App extends Component {
     events: [],
     locations: [],
     eventCount: 32,
-    prevEventCount: undefined,
     infoText: "",
   };
 
